@@ -1,0 +1,116 @@
+.BuildServices {
+    background-color: #e8f2f5;
+    padding: 40px 0;
+    /* margin-bottom: 140px; */
+}
+.react-multi-carousel-list {
+    direction: ltr;
+}
+.ourBlogBlock .react-multi-carousel-list,
+.BuildServices .react-multi-carousel-list {
+    margin-top: 40px;
+
+    padding-top: 100px;
+    margin-bottom: -120px;
+    margin-top: -70px;
+}
+.BuildServices .react-multi-carousel-item {
+    /* background-color: #fff;
+    border-radius: 20px;
+    padding: 10px; */
+}
+.service-card {
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 10px;
+    position: relative;
+
+    width: 95% !important;
+    margin: auto;
+}
+.service-card__content {
+    padding: 40px 20px;
+    border-radius: 20px;
+    /* background-color: #ffe7d8; */
+}
+.service-card img {
+    position: absolute;
+    left: 35px;
+    top: 35px;
+}
+
+.service-card__content p {
+    margin: 40px 0;
+}
+.service-card__content .read-more-button {
+    margin: auto;
+    display: block;
+}
+.react-multiple-carousel__arrow--right,
+.react-multiple-carousel__arrow--left {
+    top: 30px !important;
+    background-position: center;
+    background-size: contain;
+    opacity: 0.8 !important;
+}
+.react-multiple-carousel__arrow--left {
+    background: url(../../../../arrow1.png) no-repeat !important;
+    left: 0 !important;
+}
+.react-multiple-carousel__arrow--right {
+    left: 80px !important;
+    background: url(../../../../arrow.png) no-repeat !important;
+}
+.react-multiple-carousel__arrow--left:hover,
+.react-multiple-carousel__arrow--right:hover {
+    opacity: 1 !important;
+}
+.react-multiple-carousel__arrow--left::before,
+.react-multiple-carousel__arrow--right::before {
+    display: none !important;
+}
+
+@media only screen and (max-width: 1200px) {
+    .service-card img {
+        left: 25px;
+        top: 25px;
+        width: 70px;
+        height: 70px;
+    }
+    .service-card__content__title h3 {
+        font-size: 1.6rem;
+    }
+    .service-card__content__title h4 {
+        font-size: 1.4rem;
+    }
+    .service-card__content {
+        height: 100%;
+    }
+    .service-card {
+        height: 400px;
+    }
+}
+@media only screen and (max-width: 992px) {
+}
+@media only screen and (max-width: 767px) {
+    .service-card {
+        height: auto;
+    }
+}
+@media only screen and (max-width: 576px) {
+}
+@media only screen and (max-width: 425px) {
+    .react-multiple-carousel__arrow {
+        min-width: 25px !important;
+        min-height: 25px !important;
+        background-size: contain !important;
+    }
+    .react-multiple-carousel__arrow--left {
+        min-width: 32px !important;
+    }
+    .react-multiple-carousel__arrow--right {
+        left: 55px !important;
+    }
+}
+@media only screen and (max-width: 375px) {
+}

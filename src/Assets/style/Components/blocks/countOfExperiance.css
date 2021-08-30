@@ -1,0 +1,69 @@
+.CountOfExperiance {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 200px;
+}
+.single-count {
+    min-width: 160px;
+}
+.single-count div {
+    position: relative;
+    text-align: center;
+}
+.single-count div img {
+    position: absolute;
+    z-index: -1;
+    right: 15px;
+    top: -50px;
+}
+.single-count span {
+    /* display: block;
+    text-align: center;
+    margin-top: -30px; */
+    font-size: 2rem;
+    font-weight: bold;
+    margin-right: 15px;
+}
+.single-count p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 15px;
+    text-align: center;
+}
+
+@media only screen and (max-width: 1200px) {
+}
+@media only screen and (max-width: 992px) {
+}
+@media only screen and (max-width: 767px) {
+    .CountOfExperiance {
+        margin-top: 480px;
+    }
+    .single-count p {
+        font-size: 1.3rem;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .CountOfExperiance {
+        margin-top: 80px;
+    }
+}
+@media only screen and (max-width: 576px) {
+    .CountOfExperiance {
+        flex-direction: column;
+    }
+    .single-count {
+        margin-bottom: 60px;
+    }
+    .single-count div img {
+        right: 30px;
+    }
+    .single-count span {
+        margin-right: 35px;
+    }
+}
+@media only screen and (max-width: 425px) {
+}
+@media only screen and (max-width: 375px) {
+}

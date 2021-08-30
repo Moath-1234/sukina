@@ -1,0 +1,13 @@
+@import "./Components/pages/home/home";
+@import "./Components/blocks/countOfExperiance.css";
+@import "./Components/blocks/ShortStory.css";
+@import "./Components/blocks/BuildServices.css";
+@import "./Components/blocks/OurBlogBlock.css";
+@import "./Components/blocks/WhatSayAboutUS.css";
+@import "./Components/blocks/contactUs.css";
+@import "./Components/blocks/footer.css";
+@import "./Components/pages/AboutSokina.css";
+@import "./Components/pages/SokinaServices/SokinaServices.css";
+@import "./Components/pages/blogPage/blogPage.css";
+
+@import "../style/base/global-style.css";

@@ -1,0 +1,78 @@
+:root {
+    --primaryColor: #207da1;
+    --secondaryColor: #c0c0c0;
+    --secondaryTextColor: #d57c44;
+}
+.WhatSayAboutUS {
+    padding: 90px 0 40px 0;
+}
+
+.WhatSayAboutUS .react-multi-carousel-list {
+    margin-top: -20px !important;
+
+    padding-top: 150px !important;
+    padding-bottom: 50px;
+    margin-bottom: 0px !important;
+}
+.client-review {
+    border: 8px solid #bdd9e3;
+    position: relative;
+    width: 95%;
+    margin: auto;
+    padding: 40px 20px;
+    height: 245px;
+}
+.client-review img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: -50px;
+    right: 20px;
+    padding: 10px;
+    background-color: #fff;
+}
+.client-review__content__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 100px;
+    margin-bottom: 30px;
+}
+.client-review__content__header h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.client-review__content__header h4 {
+    color: var(--secondaryColor);
+    font-size: 1.2rem;
+}
+
+@media only screen and (max-width: 1200px) {
+}
+@media only screen and (max-width: 992px) {
+    .client-review {
+        height: 320px;
+    }
+    .client-review img {
+        width: 80px;
+        height: 80px;
+        top: -45px;
+        right: 10px;
+        padding: 5px;
+    }
+    .client-review__content__header {
+        padding-right: 0;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .client-review {
+        height: auto;
+    }
+}
+@media only screen and (max-width: 576px) {
+}
+@media only screen and (max-width: 425px) {
+}
+@media only screen and (max-width: 375px) {
+}

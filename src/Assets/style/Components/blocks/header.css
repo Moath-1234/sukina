@@ -1,0 +1,173 @@
+:root {
+    --primaryColor: #207da1;
+    --secondaryColor: #c0c0c0;
+    --secondaryTextColor: #d57c44;
+}
+.header {
+    position: relative;
+}
+
+.header-contents {
+    justify-content: space-between;
+    padding: 10px 0;
+    backdrop-filter: blur(10px);
+    background: #ffffff33;
+    z-index: 99999999;
+
+    position: fixed;
+    width: 100%;
+    padding: 10px;
+    top: 20px;
+    border-radius: 20px;
+}
+
+.header-contents ul {
+    column-gap: 20px;
+}
+.header-contents li {
+    /* // border-bottom: 2px solid transparent; */
+
+    /* // transition: ease-in-out 0.3s; */
+}
+.header-contents li:hover {
+    /* // border-color: var(--secondaryTextColor); */
+    transition: ease-in-out 0.3s;
+}
+.header-contents li a {
+    color: var(--primaryColor) !important;
+    transition: ease-in-out 0.3s;
+    border-bottom: double 2px transparent;
+}
+.header-contents li a:hover {
+    color: var(--secondaryTextColor) !important;
+    transition: ease-in-out 0.3s;
+}
+.header-contents li a::after {
+    content: "";
+    display: block;
+    width: 0%;
+    height: 10px;
+    border-bottom: none;
+    transition: width 0.7s;
+}
+.header-contents li a:active::after,
+.header-contents li a:focus::after,
+.header-contents li a:hover::after {
+    width: 100%;
+    border-bottom: double 2px var(--secondaryTextColor);
+}
+
+/* side menu  */
+
+.mobile-push-menu {
+    color: var(--primaryColor);
+    display: none;
+    margin-bottom: -69px;
+}
+.bm-overlay {
+    top: 0;
+    left: 0;
+    z-index: 9888888 !important;
+}
+
+.bm-burger-button {
+    position: relative !important;
+    margin-right: auto;
+}
+
+.bm-menu-wrap {
+    top: 0;
+    left: 0;
+    z-index: 9999999999 !important;
+    width: 50% !important;
+    background-color: var(--primaryColor);
+}
+.bm-burger-button .fa-bars {
+    font-size: 20px !important;
+}
+
+.sideMenu_logo {
+    text-align: center;
+    background-color: white;
+}
+.sideMenu_logo img {
+    margin: auto;
+    padding: 8px 0;
+    max-width: 90%;
+}
+.sideMenu_logo:focus {
+    outline: none !important;
+}
+
+.sideMenu_List {
+    margin-top: 20px;
+    padding: 0 10px;
+}
+.sideMenu_List ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.sideMenu_List li {
+    text-transform: capitalize;
+    border-bottom: 1px solid #ffffff6e;
+}
+
+.sideMenu_List span {
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 1px;
+    border-bottom: 1px solid white;
+}
+.sideMenu_List button {
+    width: 100%;
+    text-align: left;
+    background: transparent;
+}
+.sideMenu_List span,
+.sideMenu_List a,
+.sideMenu_List button {
+    display: block;
+    padding: 10px;
+    color: white !important;
+    font-size: 14px;
+}
+
+.sideMenu_loginButtons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+}
+.sideMenu_loginButtons span {
+    width: 50%;
+    text-align: center;
+    border: 0;
+}
+.sideMenu_loginButtons span:first-child {
+    padding-right: 5px;
+    border-right: 2px solid white;
+}
+
+/* header block  end*/
+
+@media only screen and (max-width: 1200px) {
+}
+@media only screen and (max-width: 992px) {
+}
+@media only screen and (max-width: 767px) {
+    .header-contents {
+        display: none !important;
+    }
+    .mobile-push-menu {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+@media only screen and (max-width: 576px) {
+}
+@media only screen and (max-width: 425px) {
+}
+@media only screen and (max-width: 375px) {
+}

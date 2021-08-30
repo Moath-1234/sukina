@@ -1,0 +1,95 @@
+:root {
+    --primaryColor: #207da1;
+    --secondaryColor: #c0c0c0;
+    --secondaryTextColor: #d57c44;
+}
+.blog-item p {
+    color: var(--secondaryColor);
+}
+.blog-item-img {
+    position: relative;
+    width: 100%;
+}
+
+.blog-item img {
+    width: 100%;
+    position: absolute;
+    top: -160px;
+    left: -50px;
+}
+.blogs-items {
+    margin-top: 260px;
+}
+.blogs-items h3 {
+    font-size: 2.4rem;
+    font-weight: bold;
+}
+.blogs-items .react-multi-carousel-list {
+    margin-top: -75px !important;
+    padding-top: 150px !important;
+    margin-bottom: 0px !important;
+    padding-bottom: 50px;
+}
+.single-blog {
+    width: 95%;
+    margin: auto;
+    background-color: #eeeeee;
+    border-radius: 20px;
+}
+.single-blog__contents {
+    padding: 15px;
+}
+.single-blog__contents h5 {
+    margin-bottom: 15px;
+}
+.single-blog img {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    width: 100%;
+}
+.single-blog p {
+    color: var(--secondaryColor);
+}
+.react-multi-carousel-dot button {
+    background: #a6cbd9 !important;
+    border: 0 !important;
+}
+.react-multi-carousel-dot--active button:focus,
+.react-multi-carousel-dot--active button {
+    background: var(--secondaryTextColor) !important;
+    border-color: var(--secondaryTextColor) !important;
+    box-shadow: 0 0 8px 2px var(--secondaryTextColor) !important;
+}
+@media only screen and (max-width: 1200px) {
+    .blog-item img {
+        width: 100%;
+        position: absolute;
+        top: -100px;
+        left: -27px;
+    }
+}
+@media only screen and (max-width: 992px) {
+    .blog-item img {
+        position: static;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .blogs-items {
+        margin-top: 120px;
+    }
+    .blogs-items .react-multi-carousel-list {
+        margin-top: -70px !important;
+    }
+    .blogs-items h3 {
+        font-size: 2rem;
+    }
+}
+@media only screen and (max-width: 576px) {
+}
+@media only screen and (max-width: 425px) {
+    .blogs-items .react-multi-carousel-list {
+        margin-top: -60px !important;
+    }
+}
+@media only screen and (max-width: 375px) {
+}
