@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import { Col, Container, Row, Carousel, InputGroup, FormControl } from "react-bootstrap";
+import { Col, Container, Row, Carousel, InputGroup, FormControl, Button, Modal } from "react-bootstrap";
 import ContactUs from "../../blocks/ContactUs";
 import BuildServices from "../../blocks/home/BuildServices";
 import CountOfExperiance from "../../blocks/home/CountOfExperiance";
@@ -11,16 +11,23 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { generalServices } from "../../../services/general";
 import { displayAlert } from "../../../utils/misc";
+import TextInput from "../../../Assets/style/Components/blocks/TextInput";
 function Home() {
     const [index, setIndex] = useState(0);
     const handleSelect = (selectedIndex, e) => {
         setIndex(selectedIndex);
     };
     const [consultation_method, setTypeSelected] = useState(1);
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
 
     const [fields, setFields] = useState({
         consultation_time: "",
         consultation_type: "",
+        name: "",
+        phone: "",
     });
 
     const onFieldChange = (name, value) => {
@@ -34,6 +41,8 @@ function Home() {
         var formdata = new FormData();
         formdata.append("consultation_time", fields.consultation_time);
         formdata.append("consultation_type", fields.consultation_type);
+        // formdata.append("name", fields.name);
+        // formdata.append("phone", fields.phone);
         formdata.append("consultation_method", consultation_method);
 
         if (fields.consultation_time && fields.consultation_type && consultation_method) {
@@ -44,6 +53,8 @@ function Home() {
                 setFields({
                     consultation_time: "",
                     consultation_type: "",
+                    name: "",
+                    phone: "",
                 });
             });
         } else {
@@ -152,7 +163,7 @@ function Home() {
                             <img src="/images/online-learning.png" alt="k" />
                         </li>
                     </ul>
-                    <button className="Appointment Booking" onClick={AppointmentBooking}>
+                    <button className="Appointment Booking" onClick={handleShow}>
                         احجز موعد
                     </button>
                 </div>
@@ -173,6 +184,18 @@ function Home() {
             <OurBlogBlock />
             <WhatSayAboutUS />
             <ContactUs />
+            <Modal show={show} onHide={handleClose}>
+                <Modal.Header closeButton>
+                    <Modal.Title>يرجى إضافة الاسم ورقم الهاتف</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    <TextInput placeholder="" value={fields.name} name="name" label="الاسم" onFieldChange={onFieldChange} type="text" />
+                    <TextInput placeholder="" value={fields.phone} name="phone" label="رقم الهاتف" onFieldChange={onFieldChange} type="text" />
+                </Modal.Body>
+                <Modal.Footer>
+                    <Button onClick={AppointmentBooking}>إرسال</Button>
+                </Modal.Footer>
+            </Modal>
         </div>
     );
 }

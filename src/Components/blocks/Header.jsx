@@ -56,22 +56,22 @@ function Header() {
                         <div className="sideMenu_List">
                             <ul className="mb-0 mt-3">
                                 <li>
-                                    <a href="/">الرئيسية</a>
+                                    <Link to="/">الرئيسية</Link>
                                 </li>
                                 <li>
-                                    <a href="/AboutSokina">عن سكينة</a>
+                                    <Link to="/AboutSokina">عن سكينة</Link>
                                 </li>
                                 <li>
-                                    <a href="/SokinaServices">خدماتنا</a>
+                                    <Link to="/SokinaServices">خدماتنا</Link>
                                 </li>
                                 <li>
-                                    <a href="/Blog">المدونة</a>
+                                    <Link to="/Blog">المدونة</Link>
                                 </li>
                                 <li>
-                                    <a href="/ContactUs">التواصل</a>
+                                    <Link to="/ContactUs">التواصل</Link>
                                 </li>
                                 <li>
-                                    <a href="/termsConditions">إحجز استشارتك</a>
+                                    <Link to="/termsConditions">إحجز استشارتك</Link>
                                 </li>
                             </ul>
                         </div>
