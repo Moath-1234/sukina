@@ -6,4 +6,4 @@ export const apiEndpoints = {
     getBlogs: "get-blogs.php",
 };
 
-export const imageLink = "https://www.moeabahre.com/sukina/assets/images/";
+export const imageLink = "https://alnabta.com/sukina/assets/images/";
