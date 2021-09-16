@@ -41,8 +41,8 @@ function Home() {
         var formdata = new FormData();
         formdata.append("consultation_time", fields.consultation_time);
         formdata.append("consultation_type", fields.consultation_type);
-        // formdata.append("name", fields.name);
-        // formdata.append("phone", fields.phone);
+         formdata.append("name", fields.name);
+         formdata.append("phone", fields.phone);
         formdata.append("consultation_method", consultation_method);
 
         if (fields.consultation_time && fields.consultation_type && consultation_method) {
