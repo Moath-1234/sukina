@@ -1,10 +1,10 @@
 import axios from "axios";
 
 class ApiService {
-    baseURL = "https://www.moeabahre.com/sukina/processes/";
+    baseURL = "https://alnabta.com/sukina/processes/";
 
     unauthenticated() {
-        return axios.create({ mode: "cors", baseURL: "https://www.moeabahre.com/sukina/processes/" });
+        return axios.create({ mode: "cors", baseURL: "https://alnabta.com/sukina/processes/" });
     }
 }
 
