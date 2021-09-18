@@ -38,6 +38,10 @@
     transition: ease-in-out 0.3s;
     border-bottom: double 2px transparent;
 }
+.header-contents li .header-logo::after {
+    border: 0 !important;
+    display: none !important;
+}
 .header-contents li a:hover {
     color: var(--secondaryTextColor) !important;
     transition: ease-in-out 0.3s;

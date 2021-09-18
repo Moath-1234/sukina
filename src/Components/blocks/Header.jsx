@@ -17,7 +17,7 @@ function Header() {
                 >
                     <ul className="flex">
                         <li>
-                            <Link to="/">
+                            <Link to="/" className="header-logo">
                                 <img src="/images/logo.png" alt="logo" />
                             </Link>
                         </li>

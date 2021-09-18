@@ -41,8 +41,8 @@ function Home() {
         var formdata = new FormData();
         formdata.append("consultation_time", fields.consultation_time);
         formdata.append("consultation_type", fields.consultation_type);
-         formdata.append("name", fields.name);
-         formdata.append("phone", fields.phone);
+        formdata.append("name", fields.name);
+        formdata.append("phone", fields.phone);
         formdata.append("consultation_method", consultation_method);
 
         if (fields.consultation_time && fields.consultation_type && consultation_method) {
@@ -56,6 +56,7 @@ function Home() {
                     name: "",
                     phone: "",
                 });
+                setShow(false);
             });
         } else {
             displayAlert("خطأ", "يجب تعبئة جميع الحقول", "error");
@@ -126,14 +127,22 @@ function Home() {
                 </div>
                 <div className="Consultation flex">
                     <InputGroup>
-                        <FormControl
+                        {/* <FormControl
                             name="consultation_type"
                             placeholder="نوع الاستشارة"
                             aria-label="نوع الاستشارة"
                             aria-describedby="basic-addon1"
                             value={fields.consultation_type}
                             onChange={({ target: { value } }) => onFieldChange("consultation_type", value)}
-                        />
+                        /> */}
+                        <select className="select-home" onChange={({ target: { value } }) => onFieldChange("consultation_type", value)}>
+                            <option selected={fields.consultation_type ? false : true} disabled className="disabled">
+                                نوع الاستشارة
+                            </option>
+                            <option value="نفسية">نفسية</option>
+                            <option value="عصبية">عصبية</option>
+                            <option value="عاطفية">عاطفية</option>
+                        </select>
                         <InputGroup.Text id="basic-addon1">
                             <img src="/images/document (2).PNG" alt="j" />{" "}
                         </InputGroup.Text>
@@ -148,6 +157,7 @@ function Home() {
                             onChange={(date) => onFieldChange("consultation_time", date)}
                             dateFormat="dd-MM-yyyy"
                             selected={fields.consultation_time}
+                            autoComplete={false}
                         />
 
                         <InputGroup.Text id="basic-addon1">
@@ -156,10 +166,18 @@ function Home() {
                     </InputGroup>
 
                     <ul className="type-of-Consultation flex">
-                        <li className={consultation_method === 1 ? "typeSelected clickable" : " clickable"} onClick={() => setTypeSelected(1)}>
+                        <li
+                            className={consultation_method === 1 ? "typeSelected clickable" : " clickable"}
+                            onClick={() => setTypeSelected(1)}
+                            title="مباشر"
+                        >
                             <img src="/images/interview (1).png" alt="k" />
                         </li>
-                        <li className={consultation_method === 2 ? "typeSelected clickable" : "clickable"} onClick={() => setTypeSelected(2)}>
+                        <li
+                            className={consultation_method === 2 ? "typeSelected clickable" : "clickable"}
+                            onClick={() => setTypeSelected(2)}
+                            title="اونلاين"
+                        >
                             <img src="/images/online-learning.png" alt="k" />
                         </li>
                     </ul>

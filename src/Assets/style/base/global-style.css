@@ -396,6 +396,7 @@ button:focus,
 .react-datepicker__navigation {
     background-color: transparent !important;
 }
+
 @media only screen and (max-width: 1400px) {
     .landing-img {
         height: 450px;
@@ -441,4 +442,25 @@ button:focus,
     .title_section h4 {
         font-size: 1.2rem;
     }
+}
+.select-home {
+    padding: 0.75rem 0.75rem !important;
+    width: 1% !important;
+    position: relative !important;
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
+    background-color: #4a96b3;
+    border: 0;
+    appearance: none;
+    color: #fff;
+    border-top-right-radius: 10px !important;
+    border-bottom-right-radius: 10px !important;
+}
+.disabled {
+    /* color: red !important; */
+    background-color: rgba(194, 194, 194, 0.699) !important;
+    opacity: 0.5;
+}
+.select-home option {
+    background-color: var(--primaryColor);
 }
