@@ -39,7 +39,6 @@ function ContactUs() {
             displayAlert("خطأ", "يجب تعبئة جميع الحقول", "error");
         }
     };
-    const location = `https://www.google.com/maps/place/21°34'08.6"N+39°07'19.8"E/@21.5690606,39.1199727,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d21.5690556!4d39.1221667?hl=en`;
     return (
         <div className="contactUs">
             <Container>
@@ -82,11 +81,20 @@ function ContactUs() {
                     </Col>
                     <Col md={6}>
                         <div className="location">
-                            <img
+                            {/* <img
                                 className="location-main-img"
                                 onClick={() => (window.location.href = location)}
                                 src="/images/Rectangle 94.png"
                                 alt="l"
+                            /> */}
+                            <iframe
+                                title="Google Map"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3710.432207266351!2d39.119969414941735!3d21.569045985708264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjHCsDM0JzA4LjYiTiAzOcKwMDcnMTkuOCJF!5e0!3m2!1sen!2sjo!4v1631992406556!5m2!1sen!2sjo"
+                                width="100%"
+                                height={450}
+                                style={{ border: "0px" }}
+                                allowfullscreen=""
+                                loading="lazy"
                             />
                             <div className="location-content">
                                 <div className="location-item">
